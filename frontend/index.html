@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>avts</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+</head>
+<body>
+  <nav>
+    <h1>AVTS</h1>
+    <ul>
+        <li><a href="index.html">Tracker</a></li>
+        <li><a href="theft.html">Targets</a></li>
+        <li><a href="heatmap.html">Heat Maps</a></li>
+    </ul>
+  </nav>
+  
+    <div class="search-container">
+      <label for="licenseInput">License Number:</label>
+      <input type="text" id="licenseInput" placeholder="Enter License Number" >
+      
+      <label for="dateInput">Date:</label>
+      <input type="date" id="dateInput">
+      
+      <button onclick="searchData()">Search</button>
+    </div>
+    <!-- <ul id="resultList"></ul>
+
+    <div id="resultContainer"></div> -->
+
+    <div id="resultContainer">
+      <table id="resultTable">
+          <thead>
+              <tr>
+                  <th>License Plate</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Camera No</th>
+                  <th>Latitude</th>
+                  <th>Longitude</th>
+              </tr>
+          </thead>
+          <tbody id="resultList"></tbody>
+      </table>
+  </div>
+  
+
+    <button id="loadmap">Load Map</button>
+    
+    <div id="map"></div>
+
+    <script src="./scripts/index.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly"
+      defer
+    ></script>
+   
+    
+</body>
+</html>
+
+
+
+

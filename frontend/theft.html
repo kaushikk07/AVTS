@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/theftstyle.css">
+  <title>Tracking Vehicle</title>
+</head>
+<body>
+  <nav>
+    <h1>AVTS</h1>
+    <ul>
+        <li><a href="index.html">Tracker</a></li>
+        <li><a href="theft.html">Targets</a></li>
+        <li><a href="heatmap.html">Heat Maps</a></li>
+    </ul>
+  </nav>
+  
+  <form id="theftForm">
+    <label for="licensePlate">License Plate:</label>
+    <input type="text" id="licensePlate" name="licensePlate" required><br>
+
+    <label for="theft_lat">Theft Latitude:</label>
+    <input type="text" id="theft_lat" name="theft_lat" required><br>
+
+    <label for="theft_lang">Theft Longitude:</label>
+    <input type="text" id="theft_lang" name="theft_lang" required><br>
+
+    <label for="tracking">Tracking:</label>
+    <input type="checkbox" id="tracking" name="tracking" value="true"><br>
+
+    <label for="recovered">Recovered:</label>
+    <input type="checkbox" id="recovered" name="recovered" value="true"><br>
+
+    <button type="button" onclick="submitForm()">Insert</button>
+
+    <button type="button" onclick="recoverVehicle()">Vehicle Recovered</button>
+
+    
+    
+
+  </form>
+
+
+    <!-- Display the list of theft data in a table -->
+    <div id="resultContainer">
+        <table id="resultTable">
+          <thead>
+            <tr>
+              <th>License Plate</th>
+              <th>Theft Latitude</th>
+              <th>Theft Longitude</th>
+              <th>Tracking</th>
+              <th>Recovered</th>
+            </tr>
+          </thead>
+          <tbody id="resultList"></tbody>
+        </table>
+      </div>
+
+  <script src="./scripts/theftscript.js"></script>
+</body>
+</html>
